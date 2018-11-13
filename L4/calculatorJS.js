@@ -1,4 +1,4 @@
-temp="";
+temp="0";
 String.prototype.replaceAt=function(index, replacement) {
     return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
 }
@@ -13,7 +13,7 @@ function num(btn){
 
 function clearDisplay(){
    text.value="0"; 
-   temp="";   
+   temp="0";   
 }
 
 function clearHistory(){
@@ -22,7 +22,9 @@ function clearHistory(){
 }
 
 function display(symble){   
-    if(!num(symble) && !num(temp[temp.length-1])) temp = temp.replaceAt(temp.length-1,symble);
+    if(!num(symble) && !num(temp[temp.length-1])) {
+        temp = temp.replaceAt(temp.length-1,symble);
+    }
     else temp+=symble;
     text.value = temp;
 }

@@ -7,7 +7,7 @@ function checkNull(value){
 }
 
 function checkNaN(value){
-    return value===NaN;
+    return isNaN(value);
 }
 
 function checkEmptyObj(obj){
@@ -54,6 +54,6 @@ function deleteIfFalse(obj){
     }
     return obj;
 }
-var obj = {here: {is:8}, object: null};
-console.log(deleteIfFalse(obj));
+var obj = "sardf";
+console.log(checkNaN(obj));
 
