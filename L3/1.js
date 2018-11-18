@@ -50,7 +50,7 @@ function deepEqual(a, b) {
 
 function deleteIfFalse(obj){
     for (var key in obj) {
-        if(!checkNull(obj[key])) delete obj[key]; 
+       // if(!checkNull(obj[key])) delete obj[key]; 
     }
     return obj;
 }
