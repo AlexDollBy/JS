@@ -5,7 +5,7 @@ myCompany={};
 btn1.addEventListener("click", () =>{
     switch(lvl.options[lvl.selectedIndex].value) {
         case '1':
-          money = 10000000000000;
+          money = 100000000000;
           break;
       
         case '2':
