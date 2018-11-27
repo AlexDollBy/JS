@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Создаем компанию</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">    
+	<link rel="stylesheet" type="text/css" href="../css/cs-select.css" />
+	<link rel="stylesheet" type="text/css" href="../css/cs-skin-underline.css" />
+</head>
+<body class="color-2">   
+    <form>
+        <h1>Создай свою компанию</h1>
+        <div class="group"> 
+          <label class="highlight">Название</label> <br><br>             
+          <input type="text" id="name"><span class="highlight"></span>
+          
+        </div>
+        <section>
+            <select class="cs-select cs-skin-underline" id="listLvl">
+                <option value="" disabled selected>Уровень сложности</option>
+                <option value="1">Легко</option>
+                <option value="2">Сложно</option>
+                <option value="3">ОООЧень сложно</option>
+            </select>
+        </section>
+        <button type="button" id ="btn1" class="button buttonBlue">Вперед!
+          <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+        </button>
+      </form>      
+      <script src="../js/classie.js"></script>
+      <script src="../js/selectFx.js"></script>
+      <script src="../js/creatCompany_js.js"></script>      
+      <script src="../js/company_js.js"></script>
+      <script>
+          (function() {
+              [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+                  new SelectFx(el);
+              } );
+          })();
+      </script> 
+</body>
+</html>
+</body>
+</html>
