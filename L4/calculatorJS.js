@@ -44,8 +44,9 @@ window.onload = function (){
             }
             if(isNaN(text.value[text.value.length-1]) && isNaN(this.value) ) {
                 text.value = text.value.replaceAt(text.value.length-1,this.value);
-            }
-            else this.value!=="CE"?text.value+=this.value:false;
+            }else{
+                this.value!=="CE"?text.value+=this.value:false;    
+            } 
             switch (this.value) {
                 case '+':{
                     doItNow(summ,this.value);
