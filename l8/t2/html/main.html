@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>    
+    <link rel="stylesheet" href="../css/style.css">    
+	<link rel="stylesheet" type="text/css" href="../css/cs-select.css" />
+	<link rel="stylesheet" type="text/css" href="../css/cs-skin-underline.css" />
+    <script src="../js/programmer_js.js"></script>
+    <script src="../js/project_js.js"></script>
+    <link rel="stylesheet" href="../css/styleform.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left_block">
+            Название: <input type="text" id = "t1" disabled><br>
+            Бюджет: <input type="text" id="t2" disabled><br>
+            <a href="#open-modal">Новая компания</a><br><br> 
+        </div>
+        <div class="right_block">
+            Сейчас выполняется<br> <textarea id="t3" readonly> </textarea><br>
+            <progress value="0" max="100" id = "progress"></progress>
+        </div>
+    </div>
+    <br>
+   <div class="wrapper">
+    <div title="Сотрудники" class="left_block">      
+        Свободные программисты:<br>
+        <select id="listProgrammistov" size="4">
+        </select>
+        <input type="button" value="Добавить сотрудника" id="addBtn" disabled><br>
+        <input type="button" value="Удалить сотрудника" id="deleteBtn" disabled><br>  
+    </div>
+    
+    <div title="Менеджеры" class="right_block">      
+            Менеджеры компании:<br>
+            <select id="listOfManagers" size="4">
+            </select>
+            <input type="button" value="Добавить менеджера" id="addBtnM" disabled><br>
+            <input type="button" value="Удалить менеджера" id="deleteBtnM" disabled><br>  
+    </div>
+   </div>
+    <div>
+        <input type="button" value="Получить проект" id="startBtn" disabled><br>
+        <input type="button" value="Один день работы" id="tick" disabled><br>
+        
+    </div>
+    
+
+
+    <div class="modal" id="open-modal">
+    <div class="modal-container">
+            <form class="color-2">
+                    <h1>Создай свою компанию</h1>
+                    <div class="group"> 
+                      <label class="highlight">Название</label> <br><br>             
+                      <input type="text" id="name"><span class="highlight"></span>
+                      
+                    </div>
+                    <section>
+                        <select class="cs-select cs-skin-underline" id="listLvl">
+                            <option value="" disabled selected>Уровень сложности</option>
+                            <option value="1">Легко</option>
+                            <option value="2">Сложно</option>
+                            <option value="3">ОООЧень сложно</option>
+                        </select>
+                    </section>
+                    <button type="button" id ="btnUpdate" class="button buttonBlue">Вперед!
+                      <div class="ripples buttonRipples"><span class="ripplesCircle"> </span></div>
+                    </button>
+                  </form>      
+
+        <a href="#modal-close">Close</a>
+    </div>
+    </div>
+        <script src="../js/main.js"></script>
+        <script src="../js/classie.js"></script>
+        <script src="../js/selectFx.js"></script>
+        <script src="../js/creatCompany_js.js"></script>      
+        <script src="../js/company_js.js"></script>
+        <script src="../js/manager.js"></script>
+        <script src="../js/random.js"></script>
+        <script>
+          (function() {
+              [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {	
+                  new SelectFx(el);
+              } );
+          })();
+        </script> 
+</body>
+</html>
